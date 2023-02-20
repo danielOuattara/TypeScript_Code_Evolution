@@ -1,8 +1,10 @@
+export {};
+
 /* Interface
-============== */
+------------------ */
 
 function fullName(person: { firstName: string; lastName: string }) {
-  return `${person.firstName} ${person.lastName}`;
+  return `My name is ${person.firstName} ${person.lastName}`;
 }
 
 let john = {
@@ -15,27 +17,27 @@ console.log(fullName(john));
 
 //---- how to make cleaner ? : use interface
 
-//------
 interface Person {
   firstName: string;
   lastName?: string;
 }
 
 function fullName2(person: Person) {
-  return `${person.firstName} ${person.lastName}`;
+  return `My name is ${person.firstName} ${person.lastName} (with interface)`;
 }
 
 console.log(fullName2(john));
 
 //------------------------
-// optional variable
+// optional variable properties interface
+//
 interface Person3 {
   firstName: string;
   lastName?: string;
 }
 
 function fullName3(person: Person3) {
-  return `${person.firstName} ${person.lastName}`;
+  return `My name is ${person.firstName} ${person.lastName} (with interface + optional variable)`;
 }
 
 let jane = {
